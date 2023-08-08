@@ -11,7 +11,7 @@ from .serializers import LeadSerializer
 from django.contrib.auth.models import User
 
 class LeadPagination(PageNumberPagination):
-    page_size = 10
+    page_size = 3
 
 class LeadViewSet(viewsets.ModelViewSet):
   serializer_class = LeadSerializer

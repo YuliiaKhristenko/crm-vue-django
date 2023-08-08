@@ -93,25 +93,29 @@ export default {
           console.log(error)
         })
 
-      await axios
-        .get('/api/v1/teams/get_my_team/')
-        .then(response => {
-          console.log(response.data)
+      if (this.$store.state.team.name != '') {
+        await axios
+          .get('/api/v1/teams/get_my_team/')
+          .then(response => {
+            console.log(response.data)
 
-          this.$store.commit('setTeam', {
-            'id': response.data.id,
-            'name': response.data.name,
-            'plan': response.data.plan.name,
-            'max_leads': response.data.plan.max_leads,
-            'max_clients': response.data.plan.max_clients
+            this.$store.commit('setTeam', {
+              'id': response.data.id,
+              'name': response.data.name,
+              'plan': response.data.plan.name,
+              'max_leads': response.data.plan.max_leads,
+              'max_clients': response.data.plan.max_clients
+            })
+
+            this.$router.push('/dashboard/my-account')
           })
-
-          this.$router.push('/dashboard/my-account')
-        })
-        .catch(error => {
-          console.log(error)
-        })
-
+          .catch(error => {
+            console.log(error)
+          })
+      } else {
+        console.log('no team yet');
+        this.$router.push('/dashboard/add-team')
+      }
       this.$store.commit('setIsLoading', false)
     }
   }

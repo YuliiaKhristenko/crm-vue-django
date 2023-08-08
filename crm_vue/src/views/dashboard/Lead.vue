@@ -23,7 +23,7 @@
           <p><strong>Status:</strong> {{ lead.status }}</p>
           <p><strong>Priority:</strong> {{ lead.priority }}</p>
           <p><strong>Confidence:</strong> {{ lead.confidence }}</p>
-          <p><strong>Estimated value:</strong> {{ lead.estimated }}</p>
+          <p><strong>Estimated value:</strong> {{ lead.estimated_value }}</p>
           <p><strong>Created at:</strong> {{ lead.created_at }}</p>
           <p><strong>Modified at:</strong> {{ lead.modified_at }}</p>
         </div>

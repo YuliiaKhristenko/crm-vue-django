@@ -22,18 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-7hjyid@w29=9mv)1#v-*n_xyz0=psq^1sd63dvt5@++j1-l@^v'
 
-# STRIPE
-
-STRIPE_PUB_KEY = 'pk_test_51NbogUJtc2zKXRsezKxxCi9qCLIMYYaQSPJUXcjl8gkUXctzgFBF58qPW5QItgiX7HSekmUoUvd3yu0QiHSvnL4H00z4Ptg0cK'
-STRIPE_SECRET_KEY = 'sk_test_51NbogUJtc2zKXRsey1t59lf0uTGdlorkYumYRLt1zlUTsC1C0W03GsvKiTrZCy5BMc2W3obrKsPaISqaeVNwty3L003r0tX9h8'
-
-STRIPE_WEBHOOK_KEY = 'whsec_8f4e5102a1fe698ab55f8e2afe024db1ba04a992091dc9465d0b495d48c76bfb'
-
-FRONTEND_WEBSITE_SUCCESS_URL = 'http://localhost:8081/dashboard/team/plans/thankyou'
-FRONTEND_WEBSITE_CANCEL_URL = 'http://localhost:8081/dashboard/team/plans'
-
-
-STRIPE_PRICE_ID_PREMIUM_PLAN = 'price_1NbonRJtc2zKXRseruXGWprV'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
